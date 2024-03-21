@@ -70,4 +70,40 @@ describe("Interface", () => {
 
         console.log(manager);
     })
+
+    it("should support function in interface", () => {
+        interface Person {
+            name : string,
+            sayHello(name:string):string
+        }
+
+        const person : Person = {
+            name : "Nama",
+            sayHello : (name : string) : string => {
+                return `Hello ${name}, my name is Nama`
+            }
+        }
+
+        console.log(person.sayHello("Budi"));
+        
+    })
+
+    it("should support intesection type", () => {
+        interface HasName {
+            name : string
+        }
+
+        interface HasId {
+            id : string
+        }
+
+        type Domain = HasName & HasId
+
+        const domain : Domain = {
+            name : "Hallo",
+            id : "1090"
+        }
+
+        console.log(domain);
+    })
 })
