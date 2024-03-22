@@ -102,6 +102,7 @@ describe("Interface", () => {
 
         const domain : Domain = {
             name : "Hallo",
+            userame : "user",
             id : "1090"
         }
 
