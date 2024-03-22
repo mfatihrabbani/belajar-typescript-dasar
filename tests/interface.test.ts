@@ -90,7 +90,8 @@ describe("Interface", () => {
 
     it("should support intesection type", () => {
         interface HasName {
-            name : string
+            name : string,
+            userame : string
         }
 
         interface HasId {
