@@ -12,4 +12,12 @@ describe("Function", () => {
 
         printHello("Budi")
     })
+
+    it("should support default value", () => {
+        function sayHello(name: string = "Joko") {
+            console.log(`Hello ${name}`);
+        }
+
+        sayHello("Budi Ganteng")
+    })
 })
